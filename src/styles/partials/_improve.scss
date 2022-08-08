@@ -1,0 +1,27 @@
+.section.improve-skills {
+  .col img {
+    width: 100%;
+  }
+  .col.typography {
+    padding-left: 1em;
+    .skill-item {
+      border-left: 0.25em solid var(--primary-color);
+      margin-bottom: 0.5em;
+      padding-left: 0.5em;
+      padding: 0.1em 0 0.1em 0.5em;
+      color: var(--text-light);
+      transform: translateX(100%);
+      opacity: 0;
+      font-weight: bold;
+      animation: getAnimationDuration(0.5s) slideInRight forwards;
+      @for $i from 2 through 7 {
+        &:nth-child(#{$i}) {
+          animation-delay: #{$i * 0.1}s;
+        }
+      }
+    }
+    .btn {
+      margin-top: 1em;
+    }
+  }
+}
